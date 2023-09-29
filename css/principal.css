@@ -1,9 +1,9 @@
+
 body {
    margin: 0;
    padding: 0;
    font-size: 12px;
    font-family: Arial, Helvetica, sans-serif;
-
   
 }
 
@@ -15,6 +15,7 @@ header {
    align-items: center;
    width: 100%;
    height: 750px;
+   margin: auto;
    background: #22014bf0;  
    background-image: url(../img/nata/85_crop1688229306139.png_94774102-PhotoRoom.png-PhotoRoom.png);
    background-position-x: center;
@@ -26,7 +27,7 @@ header {
 }
 
 header nav {
-   width: 700px;
+   width: 70%;
    height: 70px;
    border-radius: 10px;
    overflow: hidden; 
@@ -114,18 +115,20 @@ header nav ul li a:hover{
    box-shadow: 0px 13px 38px 2px rgba(0,0,0,0.88);
    -webkit-box-shadow: 3px 13px 38px 2px rgba(0,0,0,0.88);
    -moz-box-shadow: 3px 13px 38px 2px rgba(0,0,0,0.88);
+   overflow: scroll;
 }
 
 .biografiaImagen img {
    max-width: 500px;
-   height: 750px;
+   max-height: 750px;
    border-radius: 5px;
 }
 
 .biografiaTexto {
    text-align: left;
    font-size: 1.5rem;
-   max-width: 40%;
+   max-width: 90%;
+   margin: auto;
 }
 
 .biografiaTexto h2 {
@@ -138,13 +141,16 @@ header nav ul li a:hover{
    overflow: hidden;
    text-align: center;
    padding: 40px;
-   width: 70%;
+   width: 100vh;
    margin: 190px auto 0;
 }
 .albumes-container {
+   width: 100%;
    display: flex;
    flex-wrap: wrap;
    justify-content: space-between;
+   align-items: center;
+   margin: auto;
 }
 
 .albumesSeccion h2 {
@@ -156,8 +162,9 @@ header nav ul li a:hover{
    border: 1px solid #ddd;
    border-radius: 10px;
    padding: 20px;
-   margin: 20px;
+   margin: 20px auto;
    text-align: center;
+
    transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -203,9 +210,11 @@ header nav ul li a:hover{
    overflow: hidden;
    text-align: center;
    padding: 40px;
-   max-width: 100%;
+   width: 90%;
    margin: 40px auto;
    background: url(../img/nata/fondo.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
    border-radius: 10px;
    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -221,7 +230,7 @@ header nav ul li a:hover{
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
-   width: 80%;
+   max-width: 80%;
    margin: auto;
    margin-top: 40PX;
 }
@@ -282,4 +291,50 @@ footer {
    width: 100%;
    height: 80px   ;
    color: white;
+}
+
+@media screen and (max-width: 768px) {
+   /* Modifica estilos aquí */
+   .biografiaImagen img {
+      max-width: 200px;
+      max-height: 750px;
+      border-radius: 5px;
+   }
+
+   header {
+      width: 110vh;
+   }
+
+   main section {
+      width: 110vh;
+   }
+
+   .biografiaArticulo {
+      width: 100vh;
+   }
+
+   
+   .biografiaArticulo {
+      flex-direction: column;
+      font-size: 2rem;
+   }
+
+   .fechasSeccion {
+      width:  100vh;
+      margin: auto;
+      
+
+      
+   }
+   
+   .fechas-container {
+      width: 70%;
+   }
+
+   footer {
+      overflow: hidden;
+
+      margin: auto;
+
+   }
 }
